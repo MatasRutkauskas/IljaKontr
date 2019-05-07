@@ -19,7 +19,7 @@ namespace MidTerm2
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            //lmao
         }
     }
 }
