@@ -12,7 +12,7 @@ namespace MidTerm2
 {
     public partial class Form1 : Form
     {
-        
+        Objects mobiles = new Objects();
 
         public Form1()
         {
@@ -24,6 +24,21 @@ namespace MidTerm2
             
         }
 
-        static 
+        static Mobile Cheapest(Objects mobiles) {
+
+            double min = 9999;
+            Mobile cheapest = new Mobile();
+
+            for (int i = 0; i < 4; i++)
+            {
+                Mobile mb = mobiles.GetMobile(i);
+                if (mb.price < min) {
+                    min = mb.price;
+                    cheapest = new Mobile(mb.name, mb.model, mb.price);
+                }
+            }
+
+            return cheapest;
+        }
     }
 }

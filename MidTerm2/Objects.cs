@@ -18,5 +18,9 @@ namespace MidTerm2
             mb[2] = new Mobile("huawei", "p10", 500.20);
             mb[3] = new Mobile("google", "pixel", 500.20);
         }
+
+        public Mobile GetMobile(int i) {
+            return mb[i];
+        }
     }
 }
