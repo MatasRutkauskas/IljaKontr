@@ -26,8 +26,17 @@ namespace MidTerm2
             for (int i = 0; i < 4; i++)
             {
                 Mobile mb = mobiles.GetMobile(i); 
-                richTextBox1.Text += mb.name + " " + mb.model + " " + mb.price + "\n";
+                richTextBox1.Text += mb.name + " " + mb.model + " Price: " + mb.price + "\n";
             }
+
+            richTextBox1.Text += "\n";
+
+            Mobile cheapestMobile = Cheapest(mobiles);
+            richTextBox1.Text += "Cheapest mobile: " + cheapestMobile.name + "\n";
+            richTextBox1.Text += "\n";
+            richTextBox1.Text += "Average price: " + Average(mobiles) + "\n";
+            richTextBox1.Text += "\n";
+            richTextBox1.Text += "Number of mobiles cheaper than average price: " + Number(mobiles, Average(mobiles)) + "\n";
         }
 
         static Mobile Cheapest(Objects mobiles) {
