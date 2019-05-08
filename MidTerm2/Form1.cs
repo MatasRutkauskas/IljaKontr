@@ -39,10 +39,10 @@ namespace MidTerm2
             richTextBox1.Text += "Number of mobiles cheaper than average price: " + Number(mobiles, Average(mobiles)) + "\n";
         }
 
-        static Mobile Cheapest(Objects mobiles) {
+        static Mobile Cheapest(Objects mobiles) {//returns the mobile with the cheapest price
 
-            double min = Double.MaxValue;
-            Mobile cheapest = new Mobile();
+            double min = Double.MaxValue;//value to compare to
+            Mobile cheapest = new Mobile();//found cheapest mobile
 
             for (int i = 0; i < 4; i++)
             {
@@ -56,7 +56,7 @@ namespace MidTerm2
             return cheapest;
         }
 
-        static double Average(Objects mobiles) {
+        static double Average(Objects mobiles) {//returns the average price
             double sum = 0;
             for (int i = 0; i < 4; i++)
             {
@@ -66,8 +66,8 @@ namespace MidTerm2
             return sum / 4;
         }
 
-        static int Number(Objects mobiles, double average) {
-            int count = 0;
+        static int Number(Objects mobiles, double average) {//counts the number of mobiles cheaper than the average price
+            int count = 0;//number of mobiles
             for (int i = 0; i < 4; i++)
             {
                 if (mobiles.GetMobile(i).price < average) {

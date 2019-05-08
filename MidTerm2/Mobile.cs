@@ -12,13 +12,13 @@ namespace MidTerm2
         public string model { get; set; }
         public double price { get; set; }
 
-        public Mobile() {
+        public Mobile() {//constructor without parameters
             name = "";
             model = "";
             price = 0;
         }
 
-        public Mobile(string name, string model, double price) {
+        public Mobile(string name, string model, double price) {//constructor with parameters
             this.name = name;
             this.model = model;
             this.price = price;
