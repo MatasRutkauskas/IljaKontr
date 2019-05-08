@@ -12,6 +12,8 @@ namespace MidTerm2
 {
     public partial class Form1 : Form
     {
+        
+
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +21,9 @@ namespace MidTerm2
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            //lmao
+            
         }
+
+        static 
     }
 }
